@@ -1,0 +1,24 @@
+/*
+    CSS Regeln
+    Allgemeine Syntaxc:
+
+    1.
+    selektor, ... {
+        propName: value;
+    }
+
+    2. Regeln  
+        a. Last in Wins..
+        b präziserer selektor gewinnt
+
+*/
+header {
+    height: 150px;
+    background-color: #6868d6;
+
+}
+
+#top-header {
+    background-color:blue;
+
+}
