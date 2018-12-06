@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Formulare</title>    
+
+    <style>
+            #my input:valid {
+                border-left: 3px solid green;
+            }
+
+            #my input:invalid {
+                border-left: 3px solid yellow;
+            }
+            #my .validated input:invalid + .invalid-feedback {
+                display :inline
+            }
+    </style>
+</head>
+
+
+
+<body id="my">
+    <form action="">
+        <fieldset>
+            <legend>User Registrierung</legend>
+            <hr>
+            <hr>
+            <!--VALIDIERUNG ausschalten: "novalidate" eintragen-->
+            <div>
+                    <label for="acc">Account:</label>
+                    <!--Neue Attribute required,minlength placeholder-->
+                    <input id="acc" type="text" name="acc" required minlength="3" 
+                            placeholder="Dein gewünschter AccountName" >
+                </div>
+                <hr>
+                <div>
+                    <label for="age" type="text">Alter:</label>
+                    <!--neue InpuTypes number,date,time,month,week,tel-->
+                    <!--neue Attribute min max-->
+                    <input id="age" type="number" min=22 >
+                </div>
+                <hr>
+                <div>
+                        <!--für Tastaturwechel-->
+                        <label for="dob" type="text">GeburtsDatum:</label>
+                        <input id="dob" type="tel"  >
+                        <label for="plz" >PLZ:</label>
+                        <input id="plz" type="text" pattern="\d{5}" title='5-stellig'>
+                    </div>
+                    <hr>                
+                <div>
+                        <hr>
+                        <div>
+                                <datalist id="cclist"> 
+                                        <option>Visa</option>
+                                        <option>Master</option>
+                                    </datalist>
+                            <!--für Tastaturwechel-->
+                                <label for="cc" type="text">kreditkarte:</label>
+                                <input id="cc" type="text" list="cclist">
+
+                            </div>                    
+                <hr>
+                <div>
+                        <!--für Tastaturwechel-->
+                        <label for="dob" type="text">URL:</label>
+                        <input id="dob" type="url"  >
+                    </div>
+                    <hr>                
+                <div>
+                        <hr>
+                        <div>
+                                <!--für Tastaturwechel-->
+                                <label for="dob" type="text">MAIL:</label>
+                                <input id="dob" type="email"  >
+                            </div>
+                            <hr>                
+                        <div>    
+                                <hr>
+                                <div>
+                                        <!--für Tastaturwechel-->
+                                        <label for="dob" type="text">DATE:</label>
+                                        <input id="dob" type="date"  >
+                                    </div>
+                                    <hr>                
+                                <div> 
+                                        <hr>
+                                        <div>
+                                                <!--für Tastaturwechel-->
+                                                <label for="dob" type="text">TIME:</label>
+                                                <input id="dob" type="time"  >
+                                            </div>
+                                            <hr>                
+                                        <div>      
+                                        <hr>                                              
+
+                                                <label for="jsskill">Dein javascript skill</label>
+                                            <input id="dob" type="range" name="jsskill" min=1 max=10 
+                                                 oninput="skill.value = jsskill.value" >
+
+                                             <!--neues FormElement output-->
+                                             <output name="skill" progress="p"></output>
+                                             <meter min=0 max =100></meter>
+                                        <hr>    
+                                        <div>
+                                                <!--für Tastaturwechel-->
+                                                <label for="dob" type="text">DATETIMELOCAL:</label>
+                                                <input id="dob" type="datetimelocal"  >
+                                            </div>
+                                            <hr>                
+                                        <div>      
+                                        <hr>                                        <div>
+                                                <!--für Tastaturwechel-->
+                                                <label for="dob" type="text">MONTH:</label>
+                                                <input id="dob" type="month"  >
+                                            </div>
+                                            <hr>                
+                                        <div>      
+                                            
+                                                <div>
+                                                        <!--für Tastaturwechel-->
+                                                        <label for="dob" type="text">week:</label>
+                                                        <input id="dob" type="week"  >
+                                                    </div>
+                                                    <hr>                
+                                                <div>                                              
+                            <button>Absenden</button>
+                </div>
+        </fieldset>
+</body>
+</html>
